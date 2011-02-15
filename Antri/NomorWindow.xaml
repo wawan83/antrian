@@ -1,0 +1,40 @@
+﻿<Window x:Class="Antri.NomorWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Nomor Antrian" Height="300" Width="300" ShowInTaskbar="True" WindowStyle="None" AllowsTransparency="True" Icon="logo-simrs.ico">
+    <Window.Resources>
+        <Style x:Key="ButonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        </Style>
+    </Window.Resources>
+    <Window.ContextMenu>
+        <ContextMenu>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Loket " />
+                <TextBlock Text="{Binding Loket}" x:Name="loketTextBox" FontWeight="Bold" />
+            </StackPanel>
+            <Separator/>
+            <MenuItem Header="Ganti Nomer..." Click="MenuItem_GantiNomor_Click" />
+            <Separator/>
+            <MenuItem Header="Settings" Click="MenuItem_Settings_Click" />
+            <MenuItem Header="Keluar" Click="MenuItem_Exit_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Button Click="Button_Click" Margin="0" BorderBrush="Transparent" Style="{DynamicResource ButonStyle}">
+            <Button.Template>
+                <ControlTemplate>
+                    <Viewbox>
+                        <Label Content="{Binding Number}" BorderBrush="Transparent" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" FontSize="13">
+                            <Label.BitmapEffect>
+                                <OuterGlowBitmapEffect GlowColor="White" GlowSize="1" Opacity="1" />
+                            </Label.BitmapEffect>
+                        </Label>
+                    </Viewbox>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </DockPanel>
+</Window>

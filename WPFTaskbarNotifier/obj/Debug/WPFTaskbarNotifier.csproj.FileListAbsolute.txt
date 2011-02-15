@@ -1,0 +1,7 @@
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.dll
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.pdb
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.Properties.Resources.resources
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csproj.GenerateResource.Cache
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.dll
+C:\Documents and Settings\Sam Theisens\My Documents\Visual Studio 2008\Projects\Antrian\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.pdb
