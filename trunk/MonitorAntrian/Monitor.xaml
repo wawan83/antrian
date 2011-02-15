@@ -1,0 +1,112 @@
+﻿<Window x:Class="MonitorAntrian.Monitor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:Transitionals.Controls;assembly=Transitionals"
+    xmlns:Transitions="clr-namespace:Transitionals.Transitions;assembly=Transitionals"
+    xmlns:Transitionals="clr-namespace:Transitionals;assembly=Transitionals"
+    Title="Monitor" Height="600" Width="800" Background="Black" Loaded="Window_Loaded" ShowInTaskbar="False">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <!--<RowDefinition></RowDefinition>-->
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/logo.gif" Margin="0,20,20,0" />
+                <Viewbox>
+                    <StackPanel Orientation="Vertical">
+                        <TextBox Background="Black" Foreground="Gray"  HorizontalAlignment="Center" FontWeight="Bold" 
+                                 FontSize="160" VerticalAlignment="Bottom" BorderBrush="Transparent" Text="{Binding Mode=OneWay, Path=TextJudul1}" />
+                        <TextBox Background="Black" Foreground="Gray" HorizontalAlignment="Center" FontWeight="Bold" 
+                                 FontSize="180" VerticalAlignment="Top" BorderBrush="Transparent" Text="{Binding Mode=OneWay, Path=TextJudul2}"/>
+                    </StackPanel>
+                </Viewbox>
+            </StackPanel>
+
+        </Viewbox>
+
+        <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="0" Grid.Row="2" Margin="80,0,0,0">
+            <TextBlock Foreground="White" Text="{Binding TextNomer}"/>
+        </Viewbox>
+        <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="0" Grid.Row="3" Margin="80,0,0,0">
+            <TextBlock  Foreground="White" Text="{Binding TextLoket}" />
+        </Viewbox>
+        <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="1" Grid.Row="2" Margin="20,0,5,0">
+            <Controls:TransitionElement x:Name="numberTransitionBox">
+                <Controls:TransitionElement.TransitionSelector>
+                    <Transitionals:RandomTransitionSelector >
+                        <Transitions:RotateTransition Direction="Down" />
+                        <Transitions:RotateTransition Direction="Left" />
+                        <Transitions:RotateTransition Direction="Right" />
+                        <Transitions:RotateTransition Direction="Up" />
+                    </Transitionals:RandomTransitionSelector>
+                </Controls:TransitionElement.TransitionSelector>
+            </Controls:TransitionElement>
+        </Viewbox>
+        <Viewbox Stretch="Fill" StretchDirection="Both"  Grid.Column="1" Grid.Row="3" Margin="20,0,5,0">
+            <Controls:TransitionElement x:Name="loketTransitionBox">
+                <Controls:TransitionElement.TransitionSelector>
+                    <Transitionals:RandomTransitionSelector >
+                        <Transitions:RotateTransition Direction="Left" />
+                        <Transitions:RotateTransition Direction="Up" />
+                        <Transitions:RotateTransition Direction="Right" />
+                        <Transitions:RotateTransition Direction="Down" />
+                    </Transitionals:RandomTransitionSelector>
+                </Controls:TransitionElement.TransitionSelector>
+            </Controls:TransitionElement>
+        </Viewbox>
+        <Viewbox Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
+            <Grid Margin="10,10,10,10" Background="Yellow">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="0" Grid.Row="0">
+                    <TextBlock TextAlignment="Right" Text="Nomor: "></TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="1" Grid.Row="0">
+                    <TextBlock TextAlignment="Right" Text="{Binding PreviousNumber}"></TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="2" Grid.Row="0">
+                    <TextBlock TextAlignment="Right" Text="   Loket: "></TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Fill" StretchDirection="Both" Grid.Column="3" Grid.Row="0">
+                    <TextBlock TextAlignment="Right" Text="{Binding PreviousLoket}"></TextBlock>
+                </Viewbox>
+            </Grid>
+        </Viewbox>
+        <Viewbox Grid.Row="5" Grid.ColumnSpan="2">
+            <!--<TextBlock Grid.Row="2" FontSize="22" Name="txtScrolling" Foreground="White">
+<TextBlock.RenderTransform>
+  <TranslateTransform x:Name="translate" />
+    </TextBlock.RenderTransform>
+      <TextBlock.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever">
+                    <DoubleAnimation 
+                        From="1200" To="-1200" 
+                        Storyboard.TargetName="translate" 
+                        Storyboard.TargetProperty="X"
+                        Duration="0:0:9" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </TextBlock.Triggers>
+    This is the Text to Scroll
+            </TextBlock>-->
+        </Viewbox>
+    </Grid>
+</Window>
