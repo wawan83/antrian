@@ -15,7 +15,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ApplicationIcon>logo-simrs.ico</ApplicationIcon>
+    <ApplicationIcon>monitor-antrian.ico</ApplicationIcon>
     <PublishUrl>http://localhost/MonitorAntrian/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -125,10 +125,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\LogoNTT.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="logoNTT.png" />
+    <Content Include="logoPerusahaan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="logo.gif" />
@@ -176,6 +175,9 @@
       <Project>{95A6D684-D4F4-4B1E-BFEE-13B89A3215BC}</Project>
       <Name>Antri</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="monitor-antrian.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
