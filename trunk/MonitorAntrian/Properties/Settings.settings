@@ -17,5 +17,8 @@
     <Setting Name="TextJudul2" Type="System.String" Scope="User">
       <Value Profile="(Default)">RSUD Prof. Dr. W.Z. Johannes</Value>
     </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=RSKUPANG;User ID=jamkesmas;Password=jamkesmas</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

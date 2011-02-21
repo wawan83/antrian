@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Data.OleDb;
 using System.IO;
 using System.Threading;
+using ADODB;
 using Antri.Properties;
 using Microsoft.Win32;
 
@@ -10,15 +11,13 @@ namespace Antri
 {
     public class NumberService : INotifyPropertyChanged
     {
-
         private Timer timer;
-
         public void Start()
         {
-            ExecuteNonQuery(File.ReadAllText( "CreateTable.sql" ));
+            ExecuteQuery(File.ReadAllText( "CreateTable.sql" ), false);
 
             timer = new Timer(CheckStatus, null, TimeSpan.FromMilliseconds(Settings.Default.PollingRateInMillis * 1),
-                            TimeSpan.FromMilliseconds(Settings.Default.PollingRateInMillis * 1));
+                      TimeSpan.FromMilliseconds(Settings.Default.PollingRateInMillis * 1));
             Settings.Default.PropertyChanged += Default_PropertyChanged;
 
         }
@@ -39,7 +38,7 @@ namespace Antri
 
             try
             {
-                var connection = new OleDbConnection(GetConnectionString());
+                var connection = new OleDbConnection(GetConnectionString(Settings.Default.ConnectionString));
                 connection.Open();
                 var dbCommand =
                     new OleDbCommand(
@@ -47,7 +46,7 @@ namespace Antri
                         connection);
                 object result = dbCommand.ExecuteScalar();
                 if (result == null)
-                    ExecuteNonQuery(string.Format("INSERT INTO RSUD_ANTRIAN VALUES ({0},{1})", 0, Settings.Default.Loket));
+                    ExecuteQuery(string.Format("INSERT INTO RSUD_ANTRIAN VALUES ({0},{1})", 0, Settings.Default.Loket));
                 else
                 {
                     Number = (int)result;
@@ -61,14 +60,30 @@ namespace Antri
             freetoConnect = true;
         }
 
-        public static string GetConnectionString()
+        public static string GetConnectionString(string oldString)
         {
             String connectionString = String.Empty;
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software").OpenSubKey("Nuansa").OpenSubKey("NCI Medismart").OpenSubKey("3.00").OpenSubKey("Database");
-            if (key == null)
+            var nuansaKey = Registry.CurrentUser.OpenSubKey("Software").OpenSubKey("Nuansa");
+            if (nuansaKey == null)
             {
-                throw new NullReferenceException("Tidak bisa baca registry.");
+                if (!string.IsNullOrEmpty(oldString))
+                    return oldString;
+                MSDASC.DataLinks dataLinks = new MSDASC.DataLinksClass();
+                object connection = new Connection();
+                ((Connection)connection).ConnectionString = Settings.Default.ConnectionString;
+
+                if (dataLinks.PromptEdit(ref connection))
+                {
+                    connectionString = ((Connection)connection).ConnectionString;
+                    Settings.Default.ConnectionString = connectionString;
+                }
+                return connectionString;
             }
+
+            RegistryKey key = nuansaKey.OpenSubKey("NCI Medismart").OpenSubKey("3.00").OpenSubKey("Database");
+            if (key == null)
+                throw new Exception("Tidak bisa buka registry NCI Medismart");
+
             for (int i = 0; i < 11; i++)
             {
                 var value = (string)key.GetValue("key" + i);
@@ -113,20 +128,42 @@ namespace Antri
         {
             OnPropertyChanged("ContextMenu");
         }
-        public void ExecuteNonQuery(string query)
+        
+        public void ExecuteQuery(string query)
         {
-            var connection = new OleDbConnection(GetConnectionString());
-            connection.Open();
-            var dbCommand = new OleDbCommand(query, connection);
-            dbCommand.ExecuteNonQuery();
-            connection.Close();
+            ExecuteQuery(query, false);
+        }
+
+        public void ExecuteQuery(string query, bool scalar)
+        {
+            try
+            {
+                var connection = new OleDbConnection(GetConnectionString(Settings.Default.ConnectionString));
+                connection.Open();
+                var dbCommand = new OleDbCommand(query, connection);
+                
+                if (scalar)
+                    dbCommand.ExecuteScalar();
+                else 
+                    dbCommand.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            catch(ArgumentException)
+            {
+                GetConnectionString("");
+            }
+            catch(OleDbException)
+            {
+                GetConnectionString("");
+            }
         }
 
         public void IncreaseNumber()
         {
             try
             {
-                ExecuteNonQuery(string.Format("UPDATE RSUD_ANTRIAN SET NO_ANTRIAN = (SELECT MAX(NO_ANTRIAN) FROM  RSUD_ANTRIAN) + 1 WHERE LOKET = {0}",
+                ExecuteQuery(string.Format("UPDATE RSUD_ANTRIAN SET NO_ANTRIAN = (SELECT MAX(NO_ANTRIAN) FROM  RSUD_ANTRIAN) + 1 WHERE LOKET = {0}",
                                               Settings.Default.Loket));
             }
             catch (Exception ex)
@@ -138,7 +175,7 @@ namespace Antri
         {
             try
             {
-                ExecuteNonQuery(string.Format("BEGIN TRAN; DELETE FROM RSUD_ANTRIAN; INSERT INTO RSUD_ANTRIAN VALUES ({0},{1}); COMMIT;", newNumber,
+                ExecuteQuery(string.Format("BEGIN TRAN; DELETE FROM RSUD_ANTRIAN; INSERT INTO RSUD_ANTRIAN VALUES ({0},{1}); COMMIT;", newNumber,
                                               Settings.Default.Loket));
             }
             catch (Exception ex)

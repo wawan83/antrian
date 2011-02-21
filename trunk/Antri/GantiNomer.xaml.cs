@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Drawing;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using MessageBox=System.Windows.MessageBox;
@@ -29,6 +30,16 @@ namespace Antri
             }
             else
                 nomorTextBox.Text = "0";
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var workingArea = new Rectangle((int)Left, (int)Top, (int)ActualWidth, (int)ActualHeight);
+            workingArea = Screen.GetWorkingArea(workingArea);
+
+            // Initialize the window location to the bottom right corner.
+            Left = workingArea.Right - ActualWidth;
+            Top = workingArea.Bottom - ActualHeight;
         }
 
     }

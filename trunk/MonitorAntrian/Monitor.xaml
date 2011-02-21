@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal">
-                <Image Source="Resources/logo.gif" Margin="0,20,20,0" />
+                    <Image Source="logoPerusahaan.png" Margin="50,20,20,50" Width="400" Height="400"/>
                 <Viewbox>
                     <StackPanel Orientation="Vertical">
                         <TextBox Background="Black" Foreground="Gray"  HorizontalAlignment="Center" FontWeight="Bold" 

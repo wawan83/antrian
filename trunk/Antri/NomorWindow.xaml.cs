@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
+using Antri.Properties;
 
 namespace Antri
 {
@@ -62,6 +63,7 @@ namespace Antri
 
         private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
         {
+            Settings.Default.Save();
             Close();
         }
     }

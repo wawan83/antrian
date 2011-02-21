@@ -66,12 +66,5 @@ namespace MonitorAntrian.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap logoNTT {
-            get {
-                object obj = ResourceManager.GetObject("logoNTT", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

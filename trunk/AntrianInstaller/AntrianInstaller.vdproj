@@ -15,8 +15,32 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_20C54997FD2EAFA2FF1EFC2B16EF2D55"
+        "OwnerKey" = "8:_6FA9D2E063A148408F62B02A8E5C7D80"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_23B59F767CCD4A02BED9E78D21D427FD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_44F1650E23534D22AF36DCFF0B7DF23D"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_63F2148D60B063BD52CFCA7B09A1997A"
+        "OwnerKey" = "8:_6A04B8AD913F9484E9A2CB5540255C01"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_63F2148D60B063BD52CFCA7B09A1997A"
+        "OwnerKey" = "8:_44F1650E23534D22AF36DCFF0B7DF23D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -33,20 +57,50 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_74DE6237B4374D0A8A2312D29E01D02C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9CD448EEFF2007D575D4D7269B7FB544"
         "OwnerKey" = "8:_44F1650E23534D22AF36DCFF0B7DF23D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_9EFF40896E99F49526AE2A38426F0389"
+        "OwnerKey" = "8:_63F2148D60B063BD52CFCA7B09A1997A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9EFF40896E99F49526AE2A38426F0389"
+        "OwnerKey" = "8:_20C54997FD2EAFA2FF1EFC2B16EF2D55"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B6997B8604A1E115D0536B4A56622182"
+        "OwnerKey" = "8:_6FA9D2E063A148408F62B02A8E5C7D80"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F0BED3D91CDD4C748A5CCBBE46A6C9AA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6FA9D2E063A148408F62B02A8E5C7D80"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B6997B8604A1E115D0536B4A56622182"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_20C54997FD2EAFA2FF1EFC2B16EF2D55"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -67,6 +121,12 @@
         "OwnerKey" = "8:_6A04B8AD913F9484E9A2CB5540255C01"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_63F2148D60B063BD52CFCA7B09A1997A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -85,6 +145,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -101,6 +182,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -130,6 +232,88 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_20C54997FD2EAFA2FF1EFC2B16EF2D55"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.MSDASC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_20C54997FD2EAFA2FF1EFC2B16EF2D55"
+                    {
+                    "Name" = "8:Interop.MSDASC.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.MSDASC.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_23B59F767CCD4A02BED9E78D21D427FD"
+            {
+            "SourcePath" = "8:..\\MonitorAntrian\\monitor-antrian.ico"
+            "TargetName" = "8:monitor-antrian.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_63F2148D60B063BD52CFCA7B09A1997A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.MSDASC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_63F2148D60B063BD52CFCA7B09A1997A"
+                    {
+                    "Name" = "8:Interop.MSDASC.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.MSDASC.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6A04B8AD913F9484E9A2CB5540255C01"
             {
             "AssemblyRegister" = "3:1"
@@ -161,26 +345,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74DE6237B4374D0A8A2312D29E01D02C"
-            {
-            "SourcePath" = "8:..\\Antri\\logo-simrs.ico"
-            "TargetName" = "8:logo-simrs.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9CD448EEFF2007D575D4D7269B7FB544"
             {
             "AssemblyRegister" = "3:1"
@@ -210,6 +374,77 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9EFF40896E99F49526AE2A38426F0389"
+            {
+            "SourcePath" = "8:oledb32.dll"
+            "TargetName" = "8:oledb32.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:4"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B6997B8604A1E115D0536B4A56622182"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.OLEDBError, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B6997B8604A1E115D0536B4A56622182"
+                    {
+                    "Name" = "8:Interop.OLEDBError.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.OLEDBError.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0BED3D91CDD4C748A5CCBBE46A6C9AA"
+            {
+            "SourcePath" = "8:..\\Antri\\logo-antri.ico"
+            "TargetName" = "8:logo-antri.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -296,7 +531,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Sistem Antrian Pasien"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_74DE6237B4374D0A8A2312D29E01D02C"
+        "ARPPRODUCTICON" = "8:_23B59F767CCD4A02BED9E78D21D427FD"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -410,7 +645,7 @@
             "Target" = "8:_6FA9D2E063A148408F62B02A8E5C7D80"
             "Folder" = "8:_F9A6BB53B9D94BAEA434D440BCA5AD79"
             "WorkingFolder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
-            "Icon" = "8:_74DE6237B4374D0A8A2312D29E01D02C"
+            "Icon" = "8:_F0BED3D91CDD4C748A5CCBBE46A6C9AA"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9CD9CA1C0B1A4489A41086D2DECD1719"
@@ -424,7 +659,7 @@
             "Target" = "8:_44F1650E23534D22AF36DCFF0B7DF23D"
             "Folder" = "8:_A54876E9E74049D7BC38CDB3D29B5C51"
             "WorkingFolder" = "8:_495DBDB05897473FB45C7C38FD73FDB1"
-            "Icon" = "8:_74DE6237B4374D0A8A2312D29E01D02C"
+            "Icon" = "8:_23B59F767CCD4A02BED9E78D21D427FD"
             "Feature" = "8:"
             }
         }

@@ -115,7 +115,7 @@ namespace MonitorAntrian
             try
             {
 
-                var connection = new OleDbConnection(NumberService.GetConnectionString());
+                var connection = new OleDbConnection(NumberService.GetConnectionString(Antri.Properties.Settings.Default.ConnectionString));
                 connection.Open();
                 var dbCommand = new OleDbCommand("SELECT TOP 1 NO_ANTRIAN, LOKET FROM RSUD_ANTRIAN ORDER BY NO_ANTRIAN DESC",
                                                  connection);

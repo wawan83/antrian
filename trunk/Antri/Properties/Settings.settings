@@ -17,5 +17,8 @@
     <Setting Name="LogFileName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Antri.log</Value>
     </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=RSKUPANG;User ID=jamkesmas;Password=jamkesmas</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
