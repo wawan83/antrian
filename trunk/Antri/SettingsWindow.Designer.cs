@@ -48,7 +48,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsWindow";
             this.ShowInTaskbar = false;
-            this.Text = "Settings";
+            this.Text = "Settings Antrian";
             this.ResumeLayout(false);
 
         }
