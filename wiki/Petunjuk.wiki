@@ -1,0 +1,8 @@
+#summary Pedoman sistem antrian
+
+= Penjelasan =
+
+ * Instal program dengan instaler.
+ * Untuk maju ke nomor berikutnya, tekan tombol F10 atau klik nomornya.
+ * Setting database seharusnya muncul automatis.
+ * Programnya membuat tabel RSUD_ANTRIAN dalam database yang dipilih.
